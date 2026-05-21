@@ -1,0 +1,21 @@
+meta {
+  name: Transcription
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:1337/transcription
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  audio: @file(C:\Users\gui_r\Downloads\Testando.m4a)
+  modelId: mock-gui
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
