@@ -46,3 +46,9 @@ skills-lock.json
 docs/articles
 docs/planning
 docs/agents
+
+# Closed for now, might open later
+.scratch/
+docs/adr
+docs/open-questions.md
+CONTEXT.md
