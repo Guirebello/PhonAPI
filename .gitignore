@@ -34,6 +34,7 @@ Thumbs.db
 .agents
 CLAUDE.md
 AGENTS.md
+skills-lock.json
 
 # Python
 **/.venv/
@@ -44,3 +45,4 @@ AGENTS.md
 # Articles and Docs
 docs/articles
 docs/planning
+docs/agents
