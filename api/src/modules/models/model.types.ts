@@ -1,8 +1,8 @@
-export type ModelId = 'mock-pt-br'
+export type ModelId = 'mock-pt-br' | 'xlsr-pt-br'
 
 export interface PhoneticModel {
   id: ModelId
   name: string
-  language: string
+  language: 'en' | 'pt-BR'
   status: 'available' | 'disabled'
 }

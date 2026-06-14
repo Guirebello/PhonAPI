@@ -7,6 +7,12 @@ const models: PhoneticModel[] = [
     language: 'pt-BR',
     status: 'available',
   },
+  {
+    id: 'xlsr-pt-br',
+    name: 'wav2vec XLSR pt-BR (phoneme)',
+    language: 'pt-BR',
+    status: 'available',
+  },
 ]
 
 export function listModels(): PhoneticModel[] {

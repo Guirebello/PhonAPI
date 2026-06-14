@@ -10,6 +10,7 @@ dependencies = [
     "soundfile>=0.13.1",
     "torch>=2.12.0",
     "torchaudio>=2.11.0",
+    "torchcodec>=0.14.0",
     "transformers>=5.8.1",
     "uvicorn>=0.47.0",
 ]
@@ -22,3 +23,4 @@ explicit = true
 [tool.uv.sources]
 torch = [{ index = "pytorch-cpu" }]
 torchaudio = [{ index = "pytorch-cpu" }]
+torchcodec = [{ index = "pytorch-cpu" }]
