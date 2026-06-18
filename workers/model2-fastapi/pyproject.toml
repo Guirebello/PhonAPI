@@ -1,0 +1,12 @@
+[project]
+name = "model2-fastapi"
+version = "0.1.0"
+description = "Whisper (faster-whisper) ASR worker for PhonAPI. Emits orthographic text + timestamps; grapheme-to-phoneme (IPA) happens in the TS Adapter."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "faster-whisper>=1.0.3",
+    "fastapi>=0.136.1",
+    "python-multipart>=0.0.29",
+    "uvicorn>=0.47.0",
+]

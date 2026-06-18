@@ -1,14 +1,17 @@
-import { HttpTranscriberAdapter } from '../../adapters/transcribers/HttpTranscriberAdapter'
 import { MockTranscriberAdapter } from '../../adapters/transcribers/MockTranscriberAdapter'
 import type { TranscriberAdapter } from '../../adapters/transcribers/TranscriberAdapter'
+import { WhisperEnAdapter } from '../../adapters/transcribers/WhisperEnAdapter'
+import { XlsrPtBrAdapter } from '../../adapters/transcribers/XlsrPtBrAdapter'
 import type { ModelId } from '../models/model.types'
 import type { TranscriptionInput, TranscriptionResult } from './transcription.types'
 
 const XLSR_PT_BR_URL = process.env.XLSR_PT_BR_URL ?? 'http://localhost:8000'
+const WHISPER_EN_URL = process.env.WHISPER_EN_URL ?? 'http://localhost:8001'
 
 const transcribers = new Map<ModelId, TranscriberAdapter>([
   ['mock-pt-br', new MockTranscriberAdapter()],
-  ['xlsr-pt-br', new HttpTranscriberAdapter('xlsr-pt-br', { baseUrl: XLSR_PT_BR_URL })],
+  ['xlsr-pt-br', new XlsrPtBrAdapter(XLSR_PT_BR_URL)],
+  ['whisper-en', new WhisperEnAdapter(WHISPER_EN_URL)],
 ])
 
 export function getTranscriber(modelId: ModelId): TranscriberAdapter {

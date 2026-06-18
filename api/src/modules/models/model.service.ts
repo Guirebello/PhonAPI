@@ -13,6 +13,12 @@ const models: PhoneticModel[] = [
     language: 'pt-BR',
     status: 'available',
   },
+  {
+    id: 'whisper-en',
+    name: 'Whisper small en-US (ASR + G2P)',
+    language: 'en',
+    status: 'available',
+  },
 ]
 
 export function listModels(): PhoneticModel[] {
